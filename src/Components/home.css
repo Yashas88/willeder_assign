@@ -1,0 +1,460 @@
+/*General Styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  color: #555;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+section.packages {
+  background-color: #dce1e5;
+}
+
+section:not(.hero):nth-child(even) {
+  background-color: #fff;
+}
+
+.logo img {
+  width: 22px;
+}
+
+.grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 9;
+}
+
+.image-1 {
+  background-image: url("../../src/images/Rectangle.png");
+}
+
+.image-2 {
+  background-image: url("../../src/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.png");
+}
+
+.image-3 {
+  background-image: url("../../src/images/emile-perron-xrVDYZRGdw4-unsplash.png");
+}
+
+section h3.title {
+  text-transform: capitalize;
+  font: bold 48px "Amatic SC", sans-serif;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.packages img {
+  width: 100%;
+}
+
+.destinations .grid li {
+  text-align: center;
+}
+
+.destinations .grid li.small {
+  color: #fff;
+}
+
+.destinations .grid li.large {
+  color: #fff;
+}
+
+.destinations .grid li.small div {
+  position: relative;
+  top: 40%;
+  line-height: 2;
+  letter-spacing: 0.9px;
+}
+.destinations .grid li.large div {
+  position: relative;
+  top: 40%;
+  line-height: 2;
+  letter-spacing: 0.9px;
+}
+.destinations .grid li.small div span {
+  font-size: 18px;
+}
+.destinations .grid li.large div span {
+  font-size: 18px;
+}
+.destinations .grid li.large div P {
+  font-size: 16px;
+}
+.destinations .grid li.small div P {
+  font-size: 16px;
+}
+.destinations p {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 50px 20px;
+  }
+}
+
+/*Header Styles*/
+
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 101px 15px;
+  animation: 1s fadein 0.5s forwards;
+  opacity: 0;
+  color: #fff;
+  z-index: 2;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+header h2 {
+  font-family: "Amatic SC", sans-serif;
+}
+
+header nav {
+  display: flex;
+  margin-right: -15px;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+
+  header h2 {
+    margin-bottom: 15px;
+  }
+}
+
+/*Hero Styles*/
+
+.hero {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../src/images/james-harrison-vpOeXr5wmR4-unsplash\ \(1\).png");
+  background-size: cover;
+  z-index: -1;
+  background-color: #80a3db;
+}
+
+.hero h1 {
+  font: 72px "Amatic SC", sans-serif;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font: 18px "Raleway", sans-serif;
+  font-weight: 300;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+}
+
+.hero a.btn {
+  padding: 20px 46px;
+}
+
+.hero-content-area {
+  opacity: 0;
+  margin-top: 100px;
+  animation: 1s slidefade 1s forwards;
+}
+.hero-content-area h3 {
+  background-color: #6945ff;
+  padding: 4px 10px;
+}
+
+.hero-content-area img {
+  width: 62px;
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h3 {
+    font-size: 24px;
+  }
+
+  .hero a.btn {
+    padding: 15px 40px;
+  }
+}
+
+/*Destinations Section*/
+
+.destinations .grid li {
+  height: 350px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+}
+
+.destinations .grid li.small {
+  flex-basis: 33.33%;
+}
+
+.destinations .grid li.large {
+  flex-basis: 33.33%;
+}
+
+@media (max-width: 1100px) {
+  .destinations .grid li.small,
+  .destinations .grid li.large {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .destinations .grid li.small,
+  .destinations .grid li.large {
+    flex-basis: 100%;
+  }
+}
+
+/*Packages Section*/
+
+.packages .grid li {
+  padding: 0px 0px 0px 90px;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.packages .grid li h4 {
+  font-size: 30px;
+  margin: 12px 0;
+  text-align: left;
+}
+.packages .grid li p {
+  text-align: left;
+  line-height: 2;
+}
+
+.testimonials img {
+  width: 100%;
+}
+
+section.testimonials {
+  padding: 0px;
+}
+
+.stripbody {
+  background-color: #6945ff;
+  width: 150px;
+  height: 70.8rem;
+  position: absolute;
+  left: 44%;
+}
+
+@media (max-width: 800px) {
+  .packages .grid li {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+}
+
+/*Testimonials Section*/
+
+.testimonials .quote {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 40px 0 25px;
+}
+
+@media (max-width: 800px) {
+  .testimonials .quote {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .testimonials .author {
+    font-size: 14px;
+  }
+}
+
+/* /Contact Section/ */
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.contact form .btn {
+  padding: 18px 42px;
+}
+
+.contact form input {
+  padding: 15px;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #555;
+  flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .contact form input {
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* /Footer Section/ */
+
+footer {
+  align-items: center;
+  justify-content: space-around;
+  background-color: #5c6272;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footermenu ul li {
+  padding: 15px;
+  display: inline-block;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@keyframes scaleRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.5) rotate(90deg);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+  75% {
+    transform: scale(1.5) rotate(270deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: scaleRotate 4s linear infinite;
+  }
+}
+
+.square {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 100px;
+  width: 100px;
+  border-top: 50px solid greenyellow;
+  border-left: 50px solid blue;
+  border-right: 50px solid yellow;
+  border-bottom: 50px solid red;
+}
+
+.footermenu ul li a {
+  color: #fff;
+}
+
+footer p {
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.6;
+  align-self: center;
+}
+
+.contact-social ul li {
+  padding: 10px;
+  display: inline-block;
+}
+
+.footermenu {
+  border-bottom: 1px solid #fff;
+}
+
+.destinations div {
+  color: #fff;
+  z-index: 999;
+}
+@media (max-width: 1100px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  footer ul li {
+    margin: 0 8px;
+  }
+}
