@@ -23,13 +23,13 @@ const Home = () => {
         </div>
         <nav>
           <li>
-            <a href="#">Tours</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">Page 1</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#">Page 2</a>
           </li>
         </nav>
       </header>
@@ -120,10 +120,10 @@ const Home = () => {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Home</a>
+                <a href="#">Page 1</a>
               </li>
               <li>
-                <a href="#">Home</a>
+                <a href="#">Page 2</a>
               </li>
             </ul>
           </div>
